@@ -1,0 +1,101 @@
+import java.util.*;
+public class booksbuy
+{
+    public static void main(String args[])
+    {
+         Scanner ac =new Scanner(System.in); 
+        String book1= "Book 1";
+          String book2= "Book 2";
+          String book3= "Book 3";
+          String book4= "Book 4";
+          char book1_state='a';
+          char book2_state='a';
+          char book3_state='a';
+          char book4_state='a';
+          char c=0;
+          char e;
+          System.out.println("Select a book to buy");
+          System.out.println("Press \'a\' for book 1");
+          System.out.println("Press \'b\' for book 2");
+          System.out.println("Press \'c\' for book 3");
+          System.out.println("Press \'d\' for book 4");
+          c=ac.next().charAt(0);
+           switch(c)
+          {
+          case'a':
+          System.out.print("Great\n Sold to you");
+          book1_state='s';
+          break;
+          case'b':
+          System.out.print("Great\n Sold to you");
+          book2_state='s';
+          break;
+          case'c':
+          System.out.print("Great\n Sold to you");
+          book3_state='s';
+          break;
+          case'd':
+          System.out.print("Great\n Sold to you");
+          book4_state='s';
+          break;
+          default:
+          System.out.print("Input Invalid");
+         }
+         System.out.println(" Do you want to buy again?(Y/N)");
+         e=ac.next().charAt(0);
+         if(e=='Y'){
+          System.out.println("Select a book to buy");
+          System.out.println("Press \'a\' for book 1");
+          
+          System.out.println("Press \'b\' for book 2");
+          
+          System.out.println("Press \'c\' for book 3");
+          
+          System.out.println("Press \'d\' for book 4");
+          c=ac.next().charAt(0);
+           switch(c)
+          {
+          case'a':
+           if(book1_state=='a'){
+          System.out.print("Great \n  Sold to you ");
+          book1_state='s';
+          }
+          else{System.out.print("Sorry, sold out");
+          }
+          break;
+          case'b':
+            if(book2_state=='a'){
+          System.out.print("Great\n  Sold to you");
+            book2_state='s';
+          }
+          else{System.out.print("Sorry, sold out");
+          }
+          break;
+          case'c':
+          if(book3_state=='a'){
+          System.out.print("Great\n Sold to you");
+          book3_state='s';
+        }
+          else{
+              System.out.print("Sorry, sold out");
+        }
+          break;
+          case'd':
+          if(book3_state=='a'){
+          System.out.print("Great\n Sold to you");
+          book3_state='s';
+         }
+          else{
+              System.out.print("Sorry, sold out");
+         }
+           break;
+           default:
+            System.out.print("Input Invalid");
+          }
+         }
+        if(e=='N'){
+          System.out.print("Bye");
+        }
+        
+     }
+  }
